@@ -143,7 +143,7 @@ h3{font-size: var(--type-lead); line-height:1.25;}
 .cover-title .tagline{
   font-family: var(--font-zh-serif); font-size: 32px; font-weight:400;
   font-style: italic; color: var(--platform); border-left: 3px solid var(--signal);
-  padding-left: 24px; max-width: 1300px; margin-top: 12px;
+  padding-left: 24px; max-width: 1600px; margin-top: 12px;
 }
 .cover-foot{
   display:flex; justify-content:space-between; align-items:flex-end;
@@ -210,6 +210,7 @@ h3{font-size: var(--type-lead); line-height:1.25;}
   font-family: var(--font-zh-serif); font-size: 30px; font-weight:300;
   color: var(--platform); max-width: 900px; line-height:1.5;
   border-left: 2px solid var(--signal); padding-left: 22px;
+  max-width: 1400px;
 }
 
 /* ============ TWO-COLUMN ============ */
@@ -220,8 +221,8 @@ h3{font-size: var(--type-lead); line-height:1.25;}
 /* ============ TABLES ============ */
 .tbl{width:100%; border-collapse: collapse; margin-top: 40px; font-size: 26px;}
 .tbl thead th{
-  text-align:left; font-family: var(--font-mono); font-size:15px;
-  letter-spacing:0.16em; text-transform:uppercase; color: var(--muted);
+  text-align:left; font-family: var(--font-mono); font-size:20px;
+  letter-spacing:0.12em; text-transform:uppercase; color: var(--muted);
   font-weight:500; padding: 16px 20px; border-bottom: 2px solid var(--ink);
 }
 .tbl tbody td{
@@ -338,7 +339,7 @@ h3{font-size: var(--type-lead); line-height:1.25;}
 .diff-row .new{color: var(--ink); font-size: 26px; background: rgba(232,116,60,0.06); position:relative;}
 .diff-row .new::before{content:""; position:absolute; left:0; top:0; bottom:0; width:2px; background: var(--signal);}
 .diff-row.head .label, .diff-row.head .cur, .diff-row.head .new{
-  font-family: var(--font-mono); font-size: 14px; letter-spacing:0.16em; color: var(--muted);
+  font-family: var(--font-mono); font-size: 20px; letter-spacing:0.12em; color: var(--muted);
   text-transform:uppercase; background:transparent; font-weight:500;
 }
 .diff-row.head .new::before{display:none;}
@@ -367,8 +368,9 @@ h3{font-size: var(--type-lead); line-height:1.25;}
 .step .sn{
   font-family: var(--font-en); font-size: 56px; font-weight:200;
   color: var(--signal); line-height:1; letter-spacing:-0.02em;
+  padding-top: 8px;
 }
-.step .sx{font-size: 30px; line-height:1.5; padding-top: 14px;}
+.step .sx{font-size: 30px; line-height:1.5; padding-top: 8px;}
 
 /* ============ FR card ============ */
 .fr-card{
@@ -381,8 +383,8 @@ h3{font-size: var(--type-lead); line-height:1.25;}
 }
 .fr-card .frt{font-size: 30px; font-weight:700; margin-bottom: 18px;}
 .fr-card .frd{display:grid; gap: 14px;}
-.fr-card .frd > div{display:grid; grid-template-columns: 150px 1fr; gap:16px; font-size: 26px; line-height:1.5; align-items:baseline;}
-.fr-card .frd .k{font-family: var(--font-mono); font-size:16px; letter-spacing:0.14em; color: var(--signal); text-transform:uppercase; padding-top:5px; white-space:nowrap;}
+.fr-card .frd > div{display:grid; grid-template-columns: 100px 1fr; gap:12px; font-size: 26px; line-height:1.5; align-items:baseline;}
+.fr-card .frd .k{font-family: var(--font-mono); font-size:20px; letter-spacing:0.12em; color: var(--signal); text-transform:uppercase; padding-top:3px; white-space:nowrap;}
 .fr-card .frd .v{color: var(--ink-2); font-size:26px; line-height:1.45;}
 
 /* ============ CLOSING ============ */
@@ -415,8 +417,8 @@ h3{font-size: var(--type-lead); line-height:1.25;}
 .divider-line{height:1px; background: var(--line); margin: 30px 0;}
 
 .sub-section{
-  font-family: var(--font-mono); font-size: 18px;
-  letter-spacing: 0.18em; text-transform:uppercase; color: var(--muted);
+  font-family: var(--font-mono); font-size: 22px;
+  letter-spacing: 0.14em; text-transform:uppercase; color: var(--muted);
   margin-bottom: 14px;
 }
 
@@ -426,26 +428,27 @@ h3{font-size: var(--type-lead); line-height:1.25;}
 
 /* ===== ARCH FLOW ===== */
 .arch-flow{
-  margin-top: 50px; padding: 50px 60px; background: var(--ink); color: var(--paper);
-  border-radius: 3px;
+  margin-top: 50px; padding: 50px 60px; background: var(--paper-2);
+  border-radius: 3px; border: 1px solid var(--line);
 }
 .arch-grid{display:grid; grid-template-columns: repeat(4, 1fr); gap: 16px; align-items: stretch;}
 .arch-node{
-  background: rgba(244,241,234,0.05); border: 1px solid rgba(244,241,234,0.15);
+  background: var(--paper); border: 1px solid var(--line-strong);
   padding: 24px 22px; border-radius: 3px; min-height: 150px;
   display:flex; flex-direction: column; gap: 10px;
+  border-top: 3px solid var(--signal);
 }
 .arch-node .ln{font-family: var(--font-mono); font-size:13px; letter-spacing:0.16em; color: var(--signal);}
-.arch-node .nm{font-size: 26px; font-weight:700;}
-.arch-node .ds{font-size: 22px; color: rgba(244,241,234,0.65); line-height:1.4;}
+.arch-node .nm{font-size: 26px; font-weight:700; color: var(--ink);}
+.arch-node .ds{font-size: 22px; color: var(--muted); line-height:1.4;}
 .arch-arrow{
   display:flex; align-items:center; justify-content:center;
   font-family: var(--font-mono); color: var(--signal); font-size: 24px;
 }
 .feedback-loop{
-  margin-top: 24px; padding: 18px 24px; border: 1px dashed rgba(244,241,234,0.3);
+  margin-top: 24px; padding: 18px 24px; border: 1px dashed var(--line-strong);
   border-radius: 3px; font-family: var(--font-mono); font-size: 16px;
-  letter-spacing: 0.1em; color: rgba(244,241,234,0.7); text-align: center;
+  letter-spacing: 0.1em; color: var(--muted); text-align: center;
 }
 .feedback-loop .hl{color: var(--signal);}
 
@@ -1260,10 +1263,10 @@ h3{font-size: var(--type-lead); line-height:1.25;}
     </thead>
     <tbody>
       <tr><td class="role">GPS 圍欄</td><td><span style="font-family:var(--font-mono);">A-GPS</span></td><td>偵測旅客進入車站範圍</td></tr>
-      <tr><td class="role">BLE Beacon 群</td><td><span style="font-family:var(--font-mono);">iBeacon / Eddystone</span></td><td>樓層、區塊定位 (3 – 5 m)</td></tr>
+      <tr><td class="role">BLE Beacon 群</td><td><span style="font-family:var(--font-mono); white-space:nowrap;">iBeacon / Eddystone</span></td><td>樓層、區塊定位 (3 – 5 m)</td></tr>
       <tr><td class="role">UWB Anchor</td><td><span style="font-family:var(--font-mono);">IEEE 802.15.4z</span></td><td>月臺車廂定位 (10 – 30 cm)</td></tr>
       <tr><td class="role">重量感測器</td><td><span style="font-family:var(--font-mono);">轉向架壓力感測</span></td><td>推估車廂載客率</td></tr>
-      <tr><td class="role">影像分析節點</td><td><span style="font-family:var(--font-mono);">Edge AI · YOLO / OpenPose</span></td><td>月臺人流、車廂擁擠度</td></tr>
+      <tr><td class="role">影像分析節點</td><td><span style="font-family:var(--font-mono); white-space:nowrap;">Edge AI · YOLO / OpenPose</span></td><td>月臺人流、車廂擁擠度</td></tr>
       <tr><td class="role">列車 GPS / RFID</td><td><span style="font-family:var(--font-mono);">車載定位裝置</span></td><td>列車即時位置</td></tr>
     </tbody>
   </table>
@@ -1468,9 +1471,9 @@ h3{font-size: var(--type-lead); line-height:1.25;}
     <tbody>
       <tr><td class="role">感測 → 整合</td><td><span style="font-family:var(--font-mono);color:var(--signal);">MQTT (QoS 1)</span></td><td>高頻定位、擁擠度事件</td></tr>
       <tr><td class="role">整合 → 決策</td><td><span style="font-family:var(--font-mono);color:var(--signal);">Kafka</span></td><td>持久化事件流、可重播</td></tr>
-      <tr><td class="role">決策 → 呈現</td><td><span style="font-family:var(--font-mono);color:var(--signal);">WebSocket / Server-Sent Events</span></td><td>即時推播至 App</td></tr>
+      <tr><td class="role">決策 → 呈現</td><td><span style="font-family:var(--font-mono);color:var(--signal); white-space:nowrap;">WebSocket / Server-Sent Events</span></td><td>即時推播至 App</td></tr>
       <tr><td class="role">App ↔ 後端</td><td><span style="font-family:var(--font-mono);color:var(--signal);">REST + GraphQL</span></td><td>票券、行程、設定查詢</td></tr>
-      <tr><td class="role">跨系統整合</td><td><span style="font-family:var(--font-mono);color:var(--signal);">OpenAPI 3.0 / OAuth 2.0</span></td><td>第三方服務串接</td></tr>
+      <tr><td class="role">跨系統整合</td><td><span style="font-family:var(--font-mono);color:var(--signal); white-space:nowrap;">OpenAPI 3.0 / OAuth 2.0</span></td><td>第三方服務串接</td></tr>
     </tbody>
   </table>
 
